@@ -23,7 +23,6 @@ export function useUpdateTask() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["tasks"] });
       queryClient.invalidateQueries({ queryKey: ["task"] }); // caso use fetch por id
-      queryClient.invalidateQueries({ queryKey: ["notifications"] });
     },
   });
 }

@@ -5,6 +5,7 @@ import { useUpdateNotification } from "@/hooks/notifications/useUpdateNotificati
 import { Info, Pencil, Bell, Trash } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { useNotificationSocket } from "@/hooks/notifications/useNotificationSocket";
 
 function getIconByType(type: string) {
   switch (type) {
@@ -30,6 +31,12 @@ export function NotificationPanel({ open, onOpenChange, userId }: {
 }) {
 
   const { data: notifications = [], isLoading } = useNotifications(userId);
+  const { realtimeNotifications } = useNotificationSocket(userId);
+
+  const allNotifications = [
+    ...realtimeNotifications,
+    ...notifications
+  ];
 
   const markAsRead = useUpdateNotification(); // <-- Hook para marcar como lida
 
@@ -52,14 +59,14 @@ export function NotificationPanel({ open, onOpenChange, userId }: {
               </p>
             )}
 
-            {!isLoading && notifications.length === 0 && (
+            {!isLoading && allNotifications.length === 0 && (
               <p className="text-sm text-center text-slate-500 mt-6">
                 Nenhuma notificação
               </p>
             )}
 
             {!isLoading &&
-              notifications.map((notification) => (
+              allNotifications.map((notification) => (
                 <div
                   key={notification.id}
                   onClick={() => markAsRead.mutate(notification.id)}

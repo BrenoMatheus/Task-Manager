@@ -21,7 +21,7 @@ export function useCreateTask() {
 
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["tasks"] });
-      queryClient.invalidateQueries({ queryKey: ["notifications"] });
+      //queryClient.invalidateQueries({ queryKey: ["notifications"] });
     },
   });
 }
