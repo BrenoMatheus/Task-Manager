@@ -1,0 +1,22 @@
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app/app.module';
+import { ConfigService } from '@nestjs/config';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  const configService = app.get(ConfigService);
+  const port = configService.get('PORT') || 3001;
+
+  // 🟢 HABILITA CORS AQUI
+  app.enableCors({
+    origin: '*', // ou 'http://localhost:3000'
+    methods: 'GET,POST,PUT,PATCH,DELETE,OPTIONS',
+    credentials: true,
+    allowedHeaders: 'Content-Type, Authorization',
+  });
+
+  await app.listen(port);
+  console.log(`🚀 API Gateway running on port ${port}`);
+}
+bootstrap();

@@ -1,0 +1,37 @@
+{
+  "name": "jungle-task-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down -v"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/passport-jwt": "^4.0.1",
+    "eslint": "^9.39.1",
+    "nx": "22.0.3",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "turbo": "^2.6.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@nestjs/jwt": "^11.0.1",
+    "@nestjs/microservices": "^11.1.8",
+    "@nestjs/passport": "^11.0.5",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1"
+  }
+}
