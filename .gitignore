@@ -1,0 +1,14 @@
+# Node modules (all apps)
+**/node_modules/
+
+# Logs
+*.log
+
+# Build outputs
+dist/
+build/
+out/
+
+# Env files
+#.env
+#*.env
