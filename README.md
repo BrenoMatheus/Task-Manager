@@ -89,6 +89,40 @@ Um gerenciador de tarefas completo desenvolvido para o desafio técnico da  , ap
 
 ```
 
+## Decisões Técnicas e Trade-offs
+
+* NestJS + Microserviços: Separação clara das responsabilidades entre autenticação, tarefas e notificações.
+
+* JWT: Escolhido para simplificar autenticação distribuída entre serviços.
+
+* TanStack Router + React Query: Modernidade e facilidade de gerenciamento de rotas e dados no frontend.
+
+* Mensageria (RabbitMQ): Garantir notificações em tempo real e desacoplamento entre serviços.
+
+Trade-offs:
+
+* Optei por React Query em vez de Redux para simplificar o gerenciamento de estado assíncrono.
+
+* Microsserviços adicionam complexidade para um projeto pequeno, mas simulam cenário real de produção.
+
+## Problemas Conhecidos
+
+* Alguns componentes de UI ainda podem melhorar a responsividade.
+
+* não foram implementados Testes unitários ainda.
+
+* Inicialização via Docker pode precisar de atenção à rede dependendo do sistema operacional.
+
+## Tempo Gasto
+
+* Frontend: 12h
+
+* Backend (Auth + Tasks + Notifications + Gateway): 18h
+
+* Docker, configuração e ajustes finais: 4h
+
+* Total estimado: 34h
+
 ## Como Rodar o Projeto
 
 ### Pré-requisitos
