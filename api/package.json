@@ -1,0 +1,1364 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v12.0.0"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 76.611,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3001/auth/login",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"email\": \"user@test.com\", \n  \"password\": \"123456\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "Created",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "244"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"f4-RfvXavYP+q0NwVWZGlf0ptq/0aM\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 18 Nov 2025 23:20:12 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 244,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"access_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidXNlckB0ZXN0LmNvbSIsImlhdCI6MTc2MzUwODAxMiwiZXhwIjoxNzYzNTk0NDEyfQ.iNQlzONR6pc3nIN1w6BrNtes2CqYpBycdBl4gH6AynM\",\"user\":{\"id\":3,\"name\":\"user\",\"email\":\"user@test.com\"}}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 76.611,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "login"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 15.439,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3001/auth/users",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJzdWIiOjMsImlhdCI6MTc2MzEzMTQ5NCwiZXhwIjoxNzYzMjE3ODk0fQ.-slrHmeJZkN0Uze38SEK7RE3-fbfqqhXrkSg4lj2iBc"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "127"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"7f-jQ3KgO38f8kMgvpaDKkkdXDuCuY\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 18 Nov 2025 22:09:46 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 127,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id\":3,\"name\":\"user\"},{\"id\":4,\"name\":\"user 2\"},{\"id\":5,\"name\":\"maria\"},{\"id\":6,\"name\":\"joao\"},{\"id\":8,\"name\":\"Mario Junior\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 15.439,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "getAll"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 99.346,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3001/auth/register",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"name\": \"Mariao Junior\", \n\t\"email\": \"marioa.joao@test.com\", \n  \"password\": \"123456\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "Created",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "136"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"88-sM8AKtMT3UoRk8sOKWo/U4GKNIY\""
+						},
+						{
+							"name": "Date",
+							"value": "Wed, 19 Nov 2025 00:09:56 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 136,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":9,\"email\":\"marioa.joao@test.com\",\"name\":\"Mariao Junior\",\"password\":\"$2b$10$t3H8GRazG3ZWLbthh.fhoe7TuOpXIr9cWhZiM59znaK3nKC9ob6cy\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 99.346,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Register"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 36.184,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3001/notifications/user/3",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJzdWIiOjMsImlhdCI6MTc2MzEzMTQ5NCwiZXhwIjoxNzYzMjE3ODk0fQ.-slrHmeJZkN0Uze38SEK7RE3-fbfqqhXrkSg4lj2iBc"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "155"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"9b-Cpu/JWFpxuTiVjHAyLx9T89RGbA\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 18 Nov 2025 23:09:48 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 155,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id\":308,\"userId\":3,\"taskId\":43,\"type\":\"task_created\",\"message\":\"Nova tarefa criada: notificação\",\"read\":false,\"createdAt\":\"2025-11-18T23:09:28.821Z\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 36.184,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "getByUser"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 16.093,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3001/tasks/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJzdWIiOjMsImlhdCI6MTc2MzQ5NzY2MSwiZXhwIjoxNzYzNTg0MDYxfQ.BN-csBzvb_2PWwkV9G1oCwsKuSqdLtf7UBbXBevdFIE"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "201"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"c9-o275/ZF+gS8H6lSvQ0pEFIeVijQ\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 18 Nov 2025 21:55:11 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 201,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id\":37,\"title\":\"Terste\",\"description\":\"Terminar a integração com o RabbitMQ e testar o envio de mensagens.\",\"dueDate\":\"2025-11-20\",\"priority\":\"HIGH\",\"status\":\"TODO\",\"userId\":3,\"assignedUsers\":[]}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 16.093,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "getAll"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 6.758,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3001/tasks/32/comments",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJzdWIiOjMsImlhdCI6MTc2MzQ5NzY2MSwiZXhwIjoxNzYzNTg0MDYxfQ.BN-csBzvb_2PWwkV9G1oCwsKuSqdLtf7UBbXBevdFIE"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "2"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 18 Nov 2025 21:38:55 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 2,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 6.758,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "getAll"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 45.589,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3001/tasks/2/users/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "462"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"1ce-4Yww6v4wzHDNmfhUW6Ilw8Frf88\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 18 Nov 2025 00:29:11 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 462,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id\":10,\"taskId\":2,\"userId\":3,\"assignedAt\":\"2025-11-17T21:00:52.561Z\",\"userName\":\"user\"},{\"id\":11,\"taskId\":2,\"userId\":8,\"assignedAt\":\"2025-11-17T23:01:45.768Z\",\"userName\":\"Mario Junior\"},{\"id\":12,\"taskId\":2,\"userId\":5,\"assignedAt\":\"2025-11-18T00:21:07.530Z\",\"userName\":\"maria\"},{\"id\":13,\"taskId\":2,\"userId\":6,\"assignedAt\":\"2025-11-18T00:21:23.326Z\",\"userName\":\"joao\"},{\"id\":14,\"taskId\":2,\"userId\":4,\"assignedAt\":\"2025-11-18T00:25:11.919Z\",\"userName\":\"user 2\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 45.589,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "getAll"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3001/tasks/1/comments",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "getAll"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 81.359,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:3001/tasks/32",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJzdWIiOjMsImlhdCI6MTc2MzQ5NzY2MSwiZXhwIjoxNzYzNTg0MDYxfQ.BN-csBzvb_2PWwkV9G1oCwsKuSqdLtf7UBbXBevdFIE"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "16"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"10-sVfJQj54VHOAwj+hmq8RTMGcte8\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 18 Nov 2025 21:38:46 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 16,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"deleted\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 81.359,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "delete"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 109.651,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:3001/tasks/comments/14",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 500,
+					"statusText": "Internal Server Error",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "52"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"34-rlKccw1E+/fV8niQk4oFitDfPro\""
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 17 Nov 2025 16:03:06 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 52,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"statusCode\":500,\"message\":\"Internal server error\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 109.651,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "delete"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 8.637,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:3001/tasks/users/5",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "16"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"10-sVfJQj54VHOAwj+hmq8RTMGcte8\""
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 17 Nov 2025 22:54:51 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 16,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"deleted\":true}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 8.637,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "delete"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 16.066,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3001/tasks/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJzdWIiOjMsImlhdCI6MTc2MzQ5NzY2MSwiZXhwIjoxNzYzNTg0MDYxfQ.BN-csBzvb_2PWwkV9G1oCwsKuSqdLtf7UBbXBevdFIE"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"title\": \"Finalizar microserviço de tarefas\",\n  \"description\": \"Terminar a integração com o RabbitMQ e testar o envio de mensagens.\",\n  \"userId\": 1,\n  \"dueDate\": \"2025-11-20T10:00:00Z\", \n  \"priority\": \"HIGH\", \n  \"status\": \"TODO\" \n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "Created",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "218"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"da-kj4gn34We/BdRMALsenZXdlLzEk\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 18 Nov 2025 21:54:56 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 218,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":37,\"title\":\"Finalizar microserviço de tarefas\",\"description\":\"Terminar a integração com o RabbitMQ e testar o envio de mensagens.\",\"dueDate\":\"2025-11-20T10:00:00Z\",\"priority\":\"HIGH\",\"status\":\"TODO\",\"userId\":3}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 16.066,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "create"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 27.109,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3001/tasks/1/comments",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"taskId\": 1,\n  \"content\": \"Tudo funcionando!\",\n  \"userId\": 2\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "Created",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "99"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"63-jUdOb+GpC3Bg3VzWZMr5eSDnYxI\""
+						},
+						{
+							"name": "Date",
+							"value": "Sat, 15 Nov 2025 20:32:07 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 99,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":8,\"taskId\":1,\"userId\":2,\"content\":\"Tudo funcionando!\",\"createdAt\":\"2025-11-15T20:32:07.311Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 27.109,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "create"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 31.442999999999998,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3001/tasks/2/users/8",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "Created",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "71"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"47-vzHgq1x05wi0z9wCnLPOI3POp9M\""
+						},
+						{
+							"name": "Date",
+							"value": "Mon, 17 Nov 2025 23:01:45 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 71,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":11,\"taskId\":2,\"userId\":8,\"assignedAt\":\"2025-11-17T23:01:45.768Z\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 31.442999999999998,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "create"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 30050.522999999997,
+				"request": {
+					"method": "PATCH",
+					"url": "http://localhost:3001/notifications/read/2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"read\": true\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "Error",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 30050.522999999997,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "readNotification"
+			},
+			{
+				"startedDateTime": "2025-11-19T16:08:33.053Z",
+				"time": 16.289,
+				"request": {
+					"method": "PATCH",
+					"url": "http://localhost:3001/tasks/37",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						},
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJzdWIiOjMsImlhdCI6MTc2MzQ5NzY2MSwiZXhwIjoxNzYzNTg0MDYxfQ.BN-csBzvb_2PWwkV9G1oCwsKuSqdLtf7UBbXBevdFIE"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n \"title\": \"Terste\"\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "180"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"b4-MXRai2hQtPcEla4+7FDt0FqlbOE\""
+						},
+						{
+							"name": "Date",
+							"value": "Tue, 18 Nov 2025 21:55:09 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 180,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":37,\"title\":\"Terste\",\"description\":\"Terminar a integração com o RabbitMQ e testar o envio de mensagens.\",\"dueDate\":\"2025-11-20\",\"priority\":\"HIGH\",\"status\":\"TODO\",\"userId\":3}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 16.289,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "update"
+			}
+		]
+	}
+}
