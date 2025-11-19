@@ -2,6 +2,11 @@
 # Jungle Task Manager – Desafio Técnico
 
 Um gerenciador de tarefas completo desenvolvido para o desafio técnico da  , aplicando boas práticas de arquitetura, microsserviços, mensageria, autenticação JWT e uma UI moderna com React + TanStack Router + React Query.
+-----------------------------
+
+![Exemplo de Interface](assets/home.png)
+
+-----------------------------
 
 ## Tecnologias Utilizadas
 * Backend
